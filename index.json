@@ -1,1 +1,14 @@
-
+[
+  {
+    "id": "snake",
+    "name": "Snake",
+    "description": "Classic snake game. Eat food, grow longer, don't hit the walls or yourself. Gets faster as your score increases.",
+    "version": "1.0",
+    "author": "BrowserOS",
+    "emoji": "🐍",
+    "icon": null,
+    "category": "Games",
+    "size": "6 KB",
+    "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/snake.beep"
+  }
+]
