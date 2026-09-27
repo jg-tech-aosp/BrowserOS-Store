@@ -22,5 +22,17 @@
   "category": "Productivity",
   "size": "5 KB",
   "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/writer.beep"
+  },
+  {
+  "id": "browserbricks",
+  "name": "BrowserBricks",
+  "description": "A colorful block-stacking arcade game. Rotate, place, and clear lines to raise your score.",
+  "version": "1.0",
+  "author": "BrowserOS",
+  "emoji": "🧱",
+  "icon": null,
+  "category": "Games",
+  "size": "5 KB",
+  "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/browserbricks.beep"
   }
 ]
