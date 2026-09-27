@@ -34,5 +34,29 @@
   "category": "Games",
   "size": "5 KB",
   "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/browserbricks.beep"
+  },
+  {
+  "id": "stage",
+  "name": "Stage",
+  "description": "Create and present slide decks. Add titles, text, and pictures, then save your presentations in Documents.",
+  "version": "1.0",
+  "author": "BrowserOS",
+  "emoji": "🎭",
+  "icon": null,
+  "category": "Productivity",
+  "size": "6 KB",
+  "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/stage.beep"
+  },
+  {
+  "id": "clock",
+  "name": "Clock",
+  "description": "A simple all-in-one clock with stopwatch, countdown timer, and Pomodoro focus sessions.",
+  "version": "1.0",
+  "author": "BrowserOS",
+  "emoji": "⏱️",
+  "icon": null,
+  "category": "Utilities",
+  "size": "4 KB",
+  "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/clock.beep"
   }
 ]
