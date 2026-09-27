@@ -3,7 +3,7 @@
     "id": "snake",
     "name": "Snake",
     "description": "Classic snake game. Eat food, grow longer, don't hit the walls or yourself. Gets faster as your score increases.",
-    "version": "1.0",
+    "version": "1.1",
     "author": "BrowserOS",
     "emoji": "🐍",
     "icon": null,
