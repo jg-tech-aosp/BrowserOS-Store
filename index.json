@@ -10,5 +10,17 @@
     "category": "Games",
     "size": "4 KB",
     "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/snake.beep"
+  },
+  {
+    "id": "writer",
+  "name": "Writer",
+  "description": "A lightweight word processor. Format text, headings, and lists, then save Writer documents in BrowserOS Documents.",
+  "version": "1.0",
+  "author": "BrowserOS",
+  "emoji": "📝",
+  "icon": null,
+  "category": "Productivity",
+  "size": "5 KB",
+  "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/writer.beep"
   }
 ]
