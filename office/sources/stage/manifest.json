@@ -1,0 +1,7 @@
+{
+  "name": "Stage", "version": "2.0", "icon": null, "emoji": "🎭", "author": "BrowserOS", "bos": "2.0",
+  "width": 1060, "height": 760,
+  "permissions": ["fs:/Documents:read", "fs:/Documents:write", "fs:/Pictures:read"],
+  "events": ["themeChanged"], "fileTypes": [".stage"], "entry": "main.js"
+}
+
