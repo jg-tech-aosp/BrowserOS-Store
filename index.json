@@ -15,7 +15,7 @@
     "id": "writer",
     "name": "Writer",
     "description": "Clear Ice word processor with fonts, colors, alignment, tables, pictures, find and replace, and text export.",
-    "version": "2.0",
+    "version": "2.0.1",
     "author": "BrowserOS",
     "emoji": "📝",
     "icon": null,
@@ -39,24 +39,24 @@
     "id": "stage",
     "name": "Stage",
     "description": "Clear Ice presentations with layouts, speaker notes, slide transitions, element animations, pictures and presentation controls.",
-    "version": "2.0",
+    "version": "2.0.1",
     "author": "BrowserOS",
     "emoji": "🎭",
     "icon": null,
     "category": "Productivity",
-    "size": "10 KB",
+    "size": "11 KB",
     "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/stage.beep"
   },
   {
     "id": "cells",
     "name": "Cells",
     "description": "Clear Ice spreadsheets with formulas, multiple sheets, formatting, undo/redo and CSV/TSV import/export.",
-    "version": "1.0",
+    "version": "1.0.1",
     "author": "BrowserOS",
     "emoji": "📊",
     "icon": null,
     "category": "Productivity",
-    "size": "14 KB",
+    "size": "15 KB",
     "url": "https://raw.githubusercontent.com/jg-tech-aosp/BrowserOS-Store/main/apps/cells.beep"
   }
 ]

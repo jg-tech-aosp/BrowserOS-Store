@@ -1,10 +1,16 @@
 # BrowserOS Office sources
 
-Writer 2.0, Stage 2.0 and Cells 1.0 are sandboxed `.beep` apps. The shared
+Writer 2.0.1, Stage 2.0.1 and Cells 1.0.1 are sandboxed `.beep` apps. The shared
 `office.js` supplies coordinated Clear Ice colors, inset surfaces, rounded
 controls, accessible dialogs and virtual filesystem document operations.
 It follows live theme changes and reduced motion. It uses the theme payload and
 BOS APIs only; it never reads the parent desktop DOM.
+
+With the current BrowserOS build, all three apps offer Save / Discard / Cancel
+before their window closes. Canceling Save As or a failed save keeps the window
+open. Pending Cells edits are committed before the close decision. Dirty state
+also enables the host's standard browser unload warning. Reload BrowserOS before
+updating the apps to load the new BOS close-guard APIs.
 
 ## Build
 
@@ -17,15 +23,15 @@ the app entry. Generated packages are placed in `dist/` for publication in
 
 ## Features
 
-- **Writer 2.0:** font and size controls, colors, highlights, alignment, headings,
+- **Writer 2.0.1:** font and size controls, colors, highlights, alignment, headings,
   lists, links, tables, embedded pictures from Pictures, find/replace, word and
   character counts, text export, and existing `.writer` documents.
-- **Stage 2.0:** four layouts, slide duplication/reordering, undo/redo, speaker
+- **Stage 2.0.1:** four layouts, slide duplication/reordering, undo/redo, speaker
   notes, four color presets, pictures, slide transitions, independent title,
   text and picture animations, and keyboard presentation controls. Speaker notes
   are hidden unless explicitly shown in the presentation view. Previous `.stage`
   documents remain readable.
-- **Cells 1.0:** multiple worksheets, formulas and ranges, cross-sheet references,
+- **Cells 1.0.1:** multiple worksheets, formulas and ranges, cross-sheet references,
   number/currency/percent formats, alignment, bold/italic/fill, rectangular
   selection, copy/paste, undo/redo, CSV/TSV import and calculated CSV export.
   Limits are 200 rows × 52 columns per sheet, 12 sheets and 2,000 characters per

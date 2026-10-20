@@ -1,5 +1,5 @@
 {
-  "name": "Cells", "version": "1.0", "icon": null, "emoji": "📊", "author": "BrowserOS", "bos": "2.0",
+  "name": "Cells", "version": "1.0.1", "icon": null, "emoji": "📊", "author": "BrowserOS", "bos": "2.0",
   "width": 1080, "height": 720,
   "permissions": ["fs:/Documents:read", "fs:/Documents:write"],
   "events": ["themeChanged"], "fileTypes": [".cells", ".csv", ".tsv"], "entry": "main.js"

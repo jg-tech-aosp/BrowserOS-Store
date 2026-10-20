@@ -91,8 +91,8 @@ const Office = (() => {
   // translate into these models, never inject an imported UI or execute macros.
   function documentController({ext,format,version,serialize,load,reset,state}){
     let path=null,title='Untitled',dirty=false,busy=false,revision=0;
-    const notify=message=>state({path,title,dirty,message});
-    const api={get path(){return path;},get title(){return title;},get dirty(){return dirty;},touch(){revision++;dirty=true;notify();},notify,
+    const notify=message=>{BOS.ui.setDocumentDirty?.(dirty);state({path,title,dirty,message});};
+    const api={get path(){return path;},get title(){return title;},get dirty(){return dirty;},get busy(){return busy;},touch(){revision++;dirty=true;notify();},notify,
       async save(as=false){if(busy)return;let target=path,name=title;
         if(as||!target){name=await prompt('Save '+ext.slice(1)+' document','Name',title==='Untitled'?'':title);if(!name)return;target='/Documents/'+filename(name,ext);}
         busy=true;notify('Saving…');try{
@@ -110,6 +110,22 @@ const Office = (() => {
     };return api;
   }
   function bindDocument(controller,openArgument=null){
+    BOS.ui.onBeforeClose?.(async()=>{
+      // Flush a pending Cells edit (including its formula bar) before deciding
+      // whether there are changes to protect.
+      document.activeElement?.blur?.();
+      if(controller.busy){controller.notify('Wait for the current save or open to finish');return false;}
+      if(!controller.dirty)return true;
+      return new Promise(resolve=>{
+        const finish=allow=>{m.close();resolve(allow);};
+        const m=modal('Save changes before closing?',p=>p.append(node('p','Your changes to '+controller.title+' have not been saved.','office-muted')),[
+          ['Cancel',()=>finish(false)],
+          ['Discard',()=>finish(true)],
+          ['Save',async()=>{m.close();try{await controller.save();resolve(!controller.dirty&&!controller.busy);}catch(e){error(e.message);resolve(false);}},true],
+        ]);
+        m.cancel=()=>finish(false);
+      });
+    });
     for(const [id,action] of [['new',()=>controller.new()],['open',()=>controller.open()],['save',()=>controller.save()],['saveas',()=>controller.save(true)]])$('#'+id).onclick=()=>Promise.resolve(action()).catch(e=>error(e.message));
     document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();controller.save(e.shiftKey);}});
     controller.notify();const args=BOS.os.args()||{};if(args.file||args.path)Promise.resolve(openArgument?openArgument(args.file||args.path):controller.open(args.file||args.path)).catch(e=>error(e.message));

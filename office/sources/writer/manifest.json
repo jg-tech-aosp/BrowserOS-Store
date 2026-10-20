@@ -1,5 +1,5 @@
 {
-  "name": "Writer", "version": "2.0", "icon": null, "emoji": "📝", "author": "BrowserOS", "bos": "2.0",
+  "name": "Writer", "version": "2.0.1", "icon": null, "emoji": "📝", "author": "BrowserOS", "bos": "2.0",
   "width": 980, "height": 720,
   "permissions": ["fs:/Documents:read", "fs:/Documents:write", "fs:/Pictures:read"],
   "events": ["themeChanged"], "fileTypes": [".writer"], "entry": "main.js"
